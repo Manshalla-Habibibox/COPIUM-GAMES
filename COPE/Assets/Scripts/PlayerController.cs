@@ -14,7 +14,16 @@ public class PlayerController : MonoBehaviour
 
     public CharacterController characterController;
 
+<<<<<<< Updated upstream
+    public Transform groundCheck;
+    public float groundCheckRadius = 0.4f;
+    public LayerMask groundMask;
+
     Vector3 velocity;
+    bool isGrounded;
+=======
+    Vector3 velocity;
+>>>>>>> Stashed changes
 
     float gravity = -9.81f;
 
@@ -27,6 +36,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundCheckRadius, groundMask);
+
         float x = Input.GetAxisRaw("Horizontal");
         float z = Input.GetAxisRaw("Vertical");
 
