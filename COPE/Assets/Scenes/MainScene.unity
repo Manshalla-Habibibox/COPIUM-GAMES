@@ -464,10 +464,11 @@ GameObject:
   - component: {fileID: 482609973}
   - component: {fileID: 482609972}
   - component: {fileID: 482609971}
+  - component: {fileID: 482609974}
   - component: {fileID: 482609970}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -548,6 +549,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &482609974
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482609969}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 90
+  m_CollisionDetection: 0
 --- !u!1 &511177154
 GameObject:
   m_ObjectHideFlags: 0
@@ -886,6 +903,7 @@ GameObject:
   - component: {fileID: 1093064263}
   - component: {fileID: 1093064266}
   - component: {fileID: 1093064262}
+  - component: {fileID: 1093064267}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -1008,6 +1026,19 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1093064267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1093064260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5356c3d9cc4ada040a381ab789ce648a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyPlayer: {fileID: 42775951}
 --- !u!1 &1298981352
 GameObject:
   m_ObjectHideFlags: 0
