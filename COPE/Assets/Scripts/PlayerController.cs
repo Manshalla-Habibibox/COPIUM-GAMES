@@ -8,15 +8,17 @@ public class PlayerController : MonoBehaviour
     // brennan's script
     // will add movement eventually
 
-    float mouseX;
-    float mouseY;
     float horizontalInput;
     float verticalInput;
 
     float mouseSensitivity;
 
+    float speed = 20f;
+
     public Transform playerBody;
     public Transform playerCam;
+
+    public CharacterController characterController;
 
     // Start is called before the first frame update
     void Start()
@@ -27,11 +29,12 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        mouseX = Input.GetAxisRaw("Mouse X") * mouseSensitivity * Time.deltaTime;
-        mouseY = Input.GetAxisRaw("Mouse Y") * mouseSensitivity * Time.deltaTime;
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
-        playerBody.Rotate(transform.up * mouseX);
+        Vector3 moveHorizontal = transform.right * horizontalInput;
+        Vector3 moveVertical = transform.forward * verticalInput;
+
+        characterController.transform.Translate((moveVertical + moveHorizontal) * speed * Time.deltaTime);
     }
 }
