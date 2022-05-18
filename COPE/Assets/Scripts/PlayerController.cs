@@ -15,8 +15,12 @@ public class PlayerController : MonoBehaviour
 
     float mouseSensitivity;
 
+    float speed = 20f;
+
     public Transform playerBody;
     public Transform playerCam;
+
+    public CharacterController characterController;
 
     // Start is called before the first frame update
     void Start()
@@ -33,5 +37,10 @@ public class PlayerController : MonoBehaviour
         verticalInput = Input.GetAxisRaw("Vertical");
 
         playerBody.Rotate(transform.up * mouseX);
+
+        Vector3 moveHorizontal = transform.right * horizontalInput;
+        Vector3 moveVertical = transform.forward * verticalInput;
+
+        characterController.transform.Translate((moveVertical + moveHorizontal) * speed * Time.deltaTime);
     }
 }
