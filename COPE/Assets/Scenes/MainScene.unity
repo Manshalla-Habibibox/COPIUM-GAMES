@@ -1729,7 +1729,7 @@ GameObject:
   - component: {fileID: 1706274818}
   - component: {fileID: 1706274817}
   m_Layer: 0
-  m_Name: Text
+  m_Name: key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1991,7 +1991,7 @@ GameObject:
   - component: {fileID: 2072864292}
   - component: {fileID: 2072864291}
   m_Layer: 0
-  m_Name: Text
+  m_Name: health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
