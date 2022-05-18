@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerStats : MonoBehaviour
+public class cripwalk : MonoBehaviour
 {
-    int health;
+    Vector3 Crip;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,12 +15,5 @@ public class PlayerStats : MonoBehaviour
     void Update()
     {
         
-    }
-     private void OnCollisionEnter3D(Collider collison)
-    {
-        if(collison.gameObject.tag == "Enemy")
-        {
-
-        }
     }
 }
