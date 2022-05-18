@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour
 {
     public static int health = 100;
+    public GameObject destroyPlayer;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,20 +17,20 @@ public class PlayerStats : MonoBehaviour
     {
         
     }
-     private void OnCollisionEnter3D(Collider collison)
+    void OnCollisionEnter(Collision collison)
     {
         if(collison.gameObject.tag == "Enemy1")
         {
-            health -= 100;
+            health -= 101;
 
-        }
-        if (health <= 0)
-        {
-            Die();
+            if (health <= 0)
+            {
+                Die();
+            }
         }
     }
     private void Die()
     {
-        Destroy(gameObject);
+        Destroy(destroyPlayer);
     }
 }
