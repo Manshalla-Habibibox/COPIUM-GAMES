@@ -14,6 +14,10 @@ public class PlayerController : MonoBehaviour
 
     public CharacterController characterController;
 
+    Vector3 velocity;
+
+    float gravity = -9.81f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,5 +33,9 @@ public class PlayerController : MonoBehaviour
         Vector3 move = transform.right * x + transform.forward * z;
 
         characterController.Move(move * speed * Time.deltaTime);
+        
+        velocity.y += gravity * Time.deltaTime;
+
+        characterController.Move(velocity * Time.deltaTime);
     }
 }
