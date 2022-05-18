@@ -15,6 +15,6 @@ public class userInterface : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        keys.text = "keys";
+        keys.text = "keys:";
     }
 }

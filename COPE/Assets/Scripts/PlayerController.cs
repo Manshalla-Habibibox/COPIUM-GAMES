@@ -15,9 +15,6 @@ public class PlayerController : MonoBehaviour
 
     float speed = 20f;
 
-    public Transform playerBody;
-    public Transform playerCam;
-
     public CharacterController characterController;
 
     // Start is called before the first frame update
