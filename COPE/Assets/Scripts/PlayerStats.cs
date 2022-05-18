@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    public static int health = 100;
+    public static int health = 1;
     public GameObject destroyPlayer;
     // Start is called before the first frame update
     void Start()
@@ -15,37 +15,29 @@ public class PlayerStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(health <= 0)
+        {
+            Die();
+        }
     }
     void OnCollisionEnter(Collision collison)
     {
         if (collison.gameObject.tag == "Enemy1")
         {
-            health -= 101;
-
-            if (health <= 0)
-            {
-                Die();
-            }
+            health = health - 100000;
+            Debug.Log("hit");
         }
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Enemy1")
-        { 
-
-            health -= 101;
-
-        if (health <= 0)
+        if (other.gameObject.tag == "Enemy1")
         {
-            Die();
-        }
-        
-
+            health = 10000000;
+            Debug.Log("hit");
         }
     }
     private void Die()
     {
-        Destroy(destroyPlayer);
+        Destroy(gameObject);
     }
 }
