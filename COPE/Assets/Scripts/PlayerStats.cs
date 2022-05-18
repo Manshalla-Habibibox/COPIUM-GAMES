@@ -19,7 +19,7 @@ public class PlayerStats : MonoBehaviour
     }
     void OnCollisionEnter(Collision collison)
     {
-        if(collison.gameObject.tag == "Enemy1")
+        if (collison.gameObject.tag == "Enemy1")
         {
             health -= 101;
 
@@ -27,6 +27,21 @@ public class PlayerStats : MonoBehaviour
             {
                 Die();
             }
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Enemy1")
+        { 
+
+            health -= 101;
+
+        if (health <= 0)
+        {
+            Die();
+        }
+        
+
         }
     }
     private void Die()
