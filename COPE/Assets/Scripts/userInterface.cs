@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class cripwalk : MonoBehaviour
+public class userInterface : MonoBehaviour
 {
-    Vector3 Crip;
+    public Text keys;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +15,6 @@ public class cripwalk : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        keys.text = "keys";
     }
 }
