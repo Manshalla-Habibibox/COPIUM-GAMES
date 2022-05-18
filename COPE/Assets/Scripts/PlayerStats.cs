@@ -20,7 +20,7 @@ public class PlayerStats : MonoBehaviour
     {
         if(collison.gameObject.tag == "Enemy1")
         {
-            health -= 10;
+            health -= 100;
 
         }
         if (health <= 0)
