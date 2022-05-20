@@ -11,7 +11,13 @@ public class scene : MonoBehaviour
     public void playGame()
     {
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("alex's_scene_for_level");
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName("alex's_scene_for_level"));
 
+    }
+
+    public void exitGame()
+    {
+        UnityEditor.EditorApplication.isPlaying = false;
     }
 }
