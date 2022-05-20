@@ -12,7 +12,7 @@ public class cameramove : MonoBehaviour
     void Start()
     {
         moveleft = new Vector3(.1f, 0, 0);
-        moveright = new Vector3(-.02f, 0, 0);
+        moveright = new Vector3(-.1f, 0, 0);
     }
 
     // Update is called once per frame
