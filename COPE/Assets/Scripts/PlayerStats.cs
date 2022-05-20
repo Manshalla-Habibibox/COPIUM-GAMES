@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    public static int health = 1;
+    public static int health = 100;
     public GameObject destroyPlayer;
+    public static int keys = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +25,7 @@ public class PlayerStats : MonoBehaviour
     {
         if (collison.gameObject.tag == "Enemy1")
         {
-            health = health - 100000;
+            health = health - 10;
             Debug.Log("hit");
         }
     }
@@ -32,12 +33,23 @@ public class PlayerStats : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy1")
         {
-            health = 10000000;
+            health =health - 10;
             Debug.Log("hit");
+        }
+        if (health <= 0)
+        {
+            Die();
+        }
+        if (other.gameObject.tag == "Collectable")
+        {
+            Destroy(other.gameObject);
+            keys++;
+            Debug.Log("Key");
         }
     }
     private void Die()
     {
         Destroy(gameObject);
     }
+
 }
