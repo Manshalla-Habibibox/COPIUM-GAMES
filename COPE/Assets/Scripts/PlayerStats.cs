@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    public static int health = 1;
+    public static int health = 100;
     public GameObject destroyPlayer;
     public static int keys = 0;
     // Start is called before the first frame update
