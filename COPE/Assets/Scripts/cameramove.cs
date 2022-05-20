@@ -11,8 +11,8 @@ public class cameramove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        moveleft = new Vector3(.1f, 0, 0);
-        moveright = new Vector3(-.1f, 0, 0);
+        moveleft = new Vector3(.02f, 0, 0);
+        moveright = new Vector3(-.02f, 0, 0);
     }
 
     // Update is called once per frame
