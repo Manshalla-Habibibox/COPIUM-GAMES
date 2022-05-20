@@ -23,10 +23,9 @@ public class PlayerStats : MonoBehaviour
     }
     void OnCollisionEnter(Collision collison)
     {
-        if (collison.gameObject.tag == "Enemy1")
+        if (collison.gameObject.tag == ("Enemy1"))
         {
-            health = health - 10;
-            Debug.Log("hit");
+            Debug.Log(health);
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -34,7 +33,7 @@ public class PlayerStats : MonoBehaviour
         if (other.gameObject.tag == "Enemy1")
         {
             health =health - 10;
-            Debug.Log("hit");
+            Debug.Log(health);
         }
         if (health <= 0)
         {
