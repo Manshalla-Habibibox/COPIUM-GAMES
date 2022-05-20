@@ -17,8 +17,8 @@ public class StartMenu : MonoBehaviour
 
     void beginGame()
     {
-        SceneManager.LoadScene("alex's_scene_for_level");
-        SceneManager.SetActiveScene(SceneManager.GetSceneByName("alex's_scene_for_level"));
+        SceneManager.LoadScene("menu");
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName("menu"));
     }
 
     void exitGame()
