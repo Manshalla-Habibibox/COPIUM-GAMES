@@ -11,8 +11,8 @@ public class scene : MonoBehaviour
     public void playGame()
     {
 
-        SceneManager.LoadScene("alex's_scene_for_level");
-        SceneManager.SetActiveScene(SceneManager.GetSceneByName("alex's_scene_for_level"));
+        SceneManager.LoadScene("MainScene");
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName("MainScene"));
 
     }
 
