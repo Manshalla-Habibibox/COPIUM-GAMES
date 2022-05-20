@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/menu.unity
     guid: 31ec4d248cb34764dbb9e2ac7ff739ef
   - enabled: 1
+    path: Assets/Scenes/alex's_scene_for_level.unity
+    guid: 0b0f1cea036d010469692819c173d29a
+  - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: b4438a64abe1dd044a78ec33d0ce0010
   m_configObjects: {}
